@@ -1,0 +1,33 @@
+<p>Авторизация</p>
+<%= form_for @user_session do |user_session| %>
+  
+   <% if @user_session.errors.any? %>
+    <div id="error_explanation">      
+      <ul>
+        <% @user_session.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+   <p>
+  <%= user_session.label :Email %>
+  <%= user_session.email_field :email %>  
+  </p>
+  
+   <p>
+  <%= user_session.label :Пароль %>
+  <%= user_session.password_field :password %>  
+  </p>
+  
+  <p>
+  <%= user_session.label :Запомнить_меня %>
+  <%= user_session.check_box :remember_me %>  
+  </p>
+  
+  <%= user_session.submit 'Войти' %>
+
+<% end %>
+
+<%= link_to 'Вернуться к списку сотрудников', users_path %>

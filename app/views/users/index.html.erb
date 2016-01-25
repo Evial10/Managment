@@ -1,0 +1,17 @@
+<h1>Список сотрудников</h1>
+
+<table>
+  <tr>
+  <th>Сотрудник</th>  
+  </tr>  
+  <% @users.each do |user| %>
+  <tr>
+  <td><%= link_to "#{user.surname} #{user.name}", user_path(user) %></td>  
+  <td><%= link_to 'Редактировать', edit_user_path(user) %></td>
+  <td><%= link_to 'Удалить', user_path(user),
+          method: :delete %></td>
+  </tr>
+  <% end %>  
+</table>
+
+<%= link_to 'Создать профиль нового сотрудника', new_user_path %>
