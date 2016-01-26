@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  skip_before_filter :authentication, only: [:new, :create]
+  before_filter :authentication
+  skip_before_filter :authentication, :only => [:new, :create]
 
   def index
     @users = User.all
@@ -44,7 +45,7 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:name, :surname, :email, :password, :password_confirmation, :birth_date, :phone )
+    params.require(:user).permit(:name, :surname, :email, :password, :password_confirmation, :birth_date, :phone, :trainee, :admin )
   end
   
   def authentication

@@ -31,6 +31,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'therubyracer', '~> 0.12.2'
 gem 'authlogic', '~> 3.4.6'
+gem 'slim', '~> 3.0.6'
+gem 'bootstrap-sass', '~> 3.3.6'
 # Use Capistrano foreployment
 # gem 'capistrano-rails', group: :development
 
