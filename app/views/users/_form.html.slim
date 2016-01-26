@@ -7,12 +7,12 @@
           li = msg 
           
   div class="form-group"
-    = user.label :Имя
+    = user.label "Имя"
     = user.text_field :name, class: "form-control"  
   
   
   div class="form-group"
-    = user.label :Фамилия
+    = user.label "Фамилия"
     = user.text_field :surname, class: "form-control" 
   
   
@@ -22,31 +22,31 @@
   
   
   div class="form-group"
-    = user.label :Пароль 
+    = user.label "Пароль" 
     = user.password_field :password, class: "form-control" 
   
   
   div class="form-group"
-    = user.label :Повторить_пароль
+    = user.label "Повторить_пароль"
     = user.password_field :password_confirmation, class: "form-control"  
   
   
   div class="form-group"
-    = user.label :Дата_рождения
+    = user.label "Дата_рождения"
     = user.datetime_local_field :birth_date, class: "form-control" 
    
   
   div class="form-group"
-    = user.label :Телефон 
+    = user.label "Телефон" 
     = user.text_field :phone, class: "form-control"   
     
     
   div class="form-group"
-    =' user.label :Сотрудник 
+    =' user.label "Сотрудник" 
     = user.check_box :trainee 
     
   div class="form-group"
-    =' user.label :Администратор 
+    =' user.label "Администратор" 
     = user.check_box :admin 
   
   = user.submit 'Зарегистрироваться', class: "btn btn-default" 
