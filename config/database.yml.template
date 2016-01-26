@@ -1,9 +1,0 @@
-development:
-  adapter: postgresql
-  host: localhost
-  port: 5432
-  database: managment_development
-  username: postgres
-  password: root
-  pool: 5
-  encoding: utf8
