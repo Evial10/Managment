@@ -1,24 +1,24 @@
 
-p class="lead" Имя: #{@user.name} 
+p.lead Имя: #{@user.first_name} 
     
-p class="lead" Фамилия: #{@user.surname} 
+p.lead Фамилия: #{@user.last_name} 
   
-p class="lead" Email: #{@user.email} 
+p.lead Email: #{@user.email} 
   
-p class="lead" Пароль: #{@user.password} 
+p.lead Пароль: #{@user.password} 
   
-p class="lead" Дата рождения #{@user.birth_date}
+p.lead Дата рождения #{@user.birth_date}
   
-p class="lead" Телефон: #{@user.phone} 
+p.lead Телефон: #{@user.phone} 
   
 -if @user.trainee
-  p class="lead" Статус: сотрудник
+  p.lead Статус: сотрудник
 - else
-  p class="lead" Статус: стажер    
+  p.lead Статус: стажер    
 
 -if @user.admin
-  p class="lead" Статус на сайте: администратор 
+  p.lead Статус на сайте: администратор 
 - else
-  p class="lead" Статус на сайте: пользователь
+  p.lead Статус на сайте: пользователь
 
 = link_to 'Вернуться к списку сотрудников', users_path 

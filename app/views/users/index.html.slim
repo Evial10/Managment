@@ -1,11 +1,11 @@
 h1 Список сотрудников
 
-table class="table"
+table.table
   tr
     th Сотрудник     
   - @users.each do |user| 
     tr
-      td = link_to "#{user.surname} #{user.name}", user_path(user)   
+      td = link_to "#{user.last_name} #{user.first_name}", user_path(user)   
       td = link_to 'Редактировать', edit_user_path(user) 
       td = link_to 'Удалить', user_path(user), method: :delete 
 
