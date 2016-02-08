@@ -1,7 +1,7 @@
 center 
-  h2 Система менеджрирования сотрудников и стажеров
+  h2 = t :welcome
  
-  p Зарегистрируйтесь или войдите 
+  p = t :welcome_reg 
 
-  = link_to 'Регистрация', new_user_path, class: "btn btn-default"
+  = link_to t(:registration), new_user_path, class: "btn btn-default"
 

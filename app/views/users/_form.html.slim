@@ -7,48 +7,59 @@
           li = msg 
           
   .form-group
-    = user.label "Имя"
+    = user.label User.human_attribute_name(:first_name)
     = user.text_field :first_name, class: "form-control"  
   
   
   .form-group
-    = user.label "Фамилия"
+    = user.label User.human_attribute_name(:last_name)
     = user.text_field :last_name, class: "form-control" 
   
   
   .form-group
-    = user.label :Email
+    = user.label User.human_attribute_name(:email)
     = user.email_field :email, class: "form-control"
   
   
   .form-group
-    = user.label "Пароль" 
+    = user.label User.human_attribute_name(:password) 
     = user.password_field :password, class: "form-control" 
   
   
   .form-group
-    = user.label "Повторить_пароль"
+    = user.label User.human_attribute_name(:password_confirmation)
     = user.password_field :password_confirmation, class: "form-control"  
   
   
   .form-group
-    = user.label "Дата_рождения"
+    = user.label User.human_attribute_name(:birth_date)
     = user.datetime_local_field :birth_date, class: "form-control" 
    
   
   .form-group
-    = user.label "Телефон" 
+    = user.label User.human_attribute_name(:phone) 
     = user.text_field :phone, class: "form-control"   
     
     
   .form-group
-    =' user.label "Сотрудник" 
+    =' user.label User.human_attribute_name(:trainee) 
     = user.check_box :trainee 
     
   .form-group
-    =' user.label "Администратор" 
+    =' user.label User.human_attribute_name(:admin) 
     = user.check_box :admin 
+    
+  .form-group
+    =' user.label User.human_attribute_name(:avatar)
+    = image_tag(@user.avatar.url, class: "img-circle") if @user.avatar?    
+    = user.file_field :avatar
+    = user.hidden_field :avatar_cache
+    
+  - if @user.avatar?
+    .form-group
+      =' user.label User.human_attribute_name(:remove_avatar)
+      = user.check_box :remove_avatar    
   
-  = user.submit 'Зарегистрироваться', class: "btn btn-default" 
+  = user.submit t(:registration_new), class: "btn btn-default" 
   
-= link_to 'Вернуться к списку сотрудников', users_path 
+= link_to t(:back), users_path 

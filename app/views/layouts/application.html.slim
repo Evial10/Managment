@@ -14,8 +14,8 @@ html
             - if current_user 
                =' current_user.first_name 
                =' current_user.last_name
-               = link_to 'Выйти', sign_out_path, method: :delete, class: "btn btn-default" 
+               = link_to t(:sign_out), sign_out_path, method: :delete, class: "btn btn-default" 
             - else
-               = link_to 'Войти', sign_in_path, class: "btn btn-default"  
+               = link_to t(:sign_in), sign_in_path, class: "btn btn-default"  
     .container                 
       = yield

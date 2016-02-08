@@ -1,4 +1,4 @@
-h3 Авторизация
+h3 = t :authorization
 = form_for @user_session do |user_session| 
     
   - if @user_session.errors.any? 
@@ -8,21 +8,21 @@ h3 Авторизация
           li = msg 
           
   .form-group
-    = user_session.label :Email 
+    = user_session.label UserSession.human_attribute_name(:email) 
     = user_session.email_field :email, class: "form-control"  
   
   
   .form-group
-    = user_session.label "Пароль"
+    = user_session.label UserSession.human_attribute_name(:password)
     = user_session.password_field :password, class: "form-control" 
   
   .form-group
-    =' user_session.label "Запомнить" 
+    =' user_session.label UserSession.human_attribute_name(:remember_me) 
     = user_session.check_box :remember_me  
       
   
-  = user_session.submit 'Войти',class: "btn btn-default"
+  = user_session.submit t(:sign_in), class: "btn btn-default"
 
 
 
-= link_to 'Вернуться к списку сотрудников', users_path 
+= link_to t(:back), users_path 

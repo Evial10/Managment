@@ -33,6 +33,12 @@ gem 'therubyracer', '~> 0.12.2'
 gem 'authlogic', '~> 3.4.6'
 gem 'slim', '~> 3.0.6'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'russian', '~> 0.6.0'
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3.6'
+gem 'faker', '~> 1.6.1'
+gem 'pundit', '~> 1.1.0'
+#gem 'image_magick', '~> 0.1.9'
 # Use Capistrano foreployment
 # gem 'capistrano-rails', group: :development
 

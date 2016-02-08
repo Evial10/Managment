@@ -1,24 +1,50 @@
+= image_tag(@user.avatar.url, class: "img-circle") if @user.avatar?
 
-p.lead Имя: #{@user.first_name} 
+p.lead  
+  = User.human_attribute_name(:first_name)
+  | :
+    #{@user.first_name} 
     
-p.lead Фамилия: #{@user.last_name} 
+p.lead 
+  = User.human_attribute_name(:last_name)
+  | : 
+    #{@user.last_name} 
   
-p.lead Email: #{@user.email} 
+p.lead 
+  = User.human_attribute_name(:email)
+  | : 
+    #{@user.email} 
   
-p.lead Пароль: #{@user.password} 
+p.lead 
+  = User.human_attribute_name(:birth_date)
+  | : 
+  = Russian::strftime(@user.birth_date, "%d %B %Y")
   
-p.lead Дата рождения #{@user.birth_date}
-  
-p.lead Телефон: #{@user.phone} 
+p.lead 
+  = User.human_attribute_name(:phone)
+  | :
+    #{@user.phone} 
   
 -if @user.trainee
-  p.lead Статус: сотрудник
+  p.lead 
+    = t(:status_out)
+    ' :
+    = t 'status.employee'
 - else
-  p.lead Статус: стажер    
+  p.lead 
+    = t(:status_out)
+    ' :
+    = t 'status.trainee'    
 
 -if @user.admin
-  p.lead Статус на сайте: администратор 
+  p.lead 
+    = t(:status_site_out)
+    ' :
+    = t 'status_site.admin' 
 - else
-  p.lead Статус на сайте: пользователь
+  p.lead 
+    = t(:status_site_out)
+    ' : 
+    = t 'status_site.user'
 
-= link_to 'Вернуться к списку сотрудников', users_path 
+= link_to t(:back), users_path 
