@@ -1,5 +1,5 @@
-h3 = t :authorization
-= form_for @user_session do |user_session| 
+h3 = t('.title')
+= simple_form_for @user_session do |user_session| 
     
   - if @user_session.errors.any? 
     #error_explanation      
@@ -7,22 +7,9 @@ h3 = t :authorization
         - @user_session.errors.full_messages.each do |msg| 
           li = msg 
           
-  .form-group
-    = user_session.label UserSession.human_attribute_name(:email) 
-    = user_session.email_field :email, class: "form-control"  
-  
-  
-  .form-group
-    = user_session.label UserSession.human_attribute_name(:password)
-    = user_session.password_field :password, class: "form-control" 
-  
-  .form-group
-    =' user_session.label UserSession.human_attribute_name(:remember_me) 
-    = user_session.check_box :remember_me  
-      
-  
+  = user_session.input :email, as: :email, input_html: {class: "form-control"}, wrapper_html: { class: 'form-group' } 
+  = user_session.input :password, as: :password, input_html: {class: "form-control"}, wrapper_html: { class: 'form-group' }
+  = user_session.input :remember_me, as: :boolean, wrapper_html: { class: 'form-group' }  
   = user_session.submit t(:sign_in), class: "btn btn-default"
-
-
-
+  
 = link_to t(:back), users_path 

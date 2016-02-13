@@ -1,0 +1,21 @@
+ru:
+  simple_form:
+    labels:
+      user_session:
+        email: "Email"
+        password: "Пароль"
+        remember_me: "Запомнить"         
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Email"
+        password: "Пароль"
+        password_confirmation: "Повторить пароль"
+        birth_date: "Дата_рождения"
+        phone: "Телефон"
+        trainee: "Сотрудник"
+        admin: "Администратор"
+        avatar: "Аватар"
+        remove_avatar: "Удалить аватар"  
+    
+  

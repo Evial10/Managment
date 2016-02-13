@@ -38,7 +38,7 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3.6'
 gem 'faker', '~> 1.6.1'
 gem 'pundit', '~> 1.1.0'
-#gem 'image_magick', '~> 0.1.9'
+gem 'simple_form', '~> 3.2.1'
 # Use Capistrano foreployment
 # gem 'capistrano-rails', group: :development
 

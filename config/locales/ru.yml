@@ -1,19 +1,25 @@
 ru:
   welcome: "Система менеджрирования сотрудников и стажеров"
   welcome_reg: "Зарегистрируйтесь или войдите" 
-  registration: "Регистрация"
-  list: "Список сотрудников"
-  authorization: "Авторизация"
-  registration_new: "Зарегистрироваться"
-  edit_people: "Редактирование профиля сотрудника"
+  registration: "Регистрация" 
+  registration_new: "Зарегистрироваться"  
   sign_out: "Выйти"
   sign_in: "Войти"
   people: "Сотрудник"
   edit: "Редактировать"
   delete: "Удалить"
-  new: "Создать профиль нового сотрудника"
-  new_people: "Создание профиля нового сотрудника"
+  new: "Создать профиль нового сотрудника"  
   back: "Вернуться к списку сотрудников"
+  users:
+    index:
+      title: "Список сотрудников"
+    new:
+      title: "Создание профиля нового сотрудника"
+    edit:
+      title: "Редактирование профиля сотрудника"
+  user_sessions:
+    new:
+      title: "Авторизация"              
   status_out: "Статус"
   status:
     trainee: "Стажер"
@@ -34,7 +40,7 @@ ru:
         last_name: "Фамилия"
         email: "Email"
         password: "Пароль"
-        password_confirmation: "Повторить_пароль"
+        password_confirmation: "Повторить пароль"
         birth_date: "Дата_рождения"
         phone: "Телефон"
         trainee: "Сотрудник"
